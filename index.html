@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="p5.min.js"></script>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/easystar-0.4.4.min.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="game.js"></script>
     <script src="sketch.js"></script>
-    <script src="Map.js"></script>
-    <script src="View.js"></script>
+    <script src="input.js"></script>
+    <script src="classes/Entity.js"></script>
+    <script src="classes/Map.js"></script>
+    <script src="classes/View.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div id="main-container">
         <div id="canvas-container"></div>
+        <div id="log-container">None</div>
+        <div class="instructions"><br>WASD Keys to Move<br>Refresh if start on wall</div>
     </div>
 </body>
 </html>
