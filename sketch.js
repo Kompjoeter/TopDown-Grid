@@ -2,7 +2,7 @@ function setup() {
   const c = createCanvas(24*16, 24*16);
   c.parent('canvas-container');
   map = new Map(64,64);
-  view = new View(24, 24, 8, map);
+  view = new View(24, 24, 16, map);
 	player = new Entity(1, 1, 10, 10, 'Player');
   entities.push(player);
   // view.target = entities[0].id;
@@ -16,10 +16,10 @@ function draw() {
     keySetVal(key);
 	}
   moveSetVal();
-  if ((moveX.valPrev !== moveX.valCur) || (moveY.valPrev !== moveY.valCur)) {
+  // if ((moveX.valPrev !== moveX.valCur) || (moveY.valPrev !== moveY.valCur)) {
     view.move(moveX.valPrev, moveY.valPrev);
     // entities[0].move(map,moveX.valPrev,moveY.valPrev);
-  }
+  // }
 	view.show(view.cellSize, view.map);
   fill('blue');
   select('#log-container').html(`colliding: ${entities[0].colliding}`);
