@@ -21,8 +21,7 @@ function draw() {
     // entities[0].move(map,moveX.valPrev,moveY.valPrev);
   // }
 	view.show(view.cellSize, view.map);
-  fill('blue');
-  select('#log-container').html(`colliding: ${entities[0].colliding}`);
+  fill('red');
   rect(Math.floor(mouseX / view.cellSize)*view.cellSize, Math.floor(mouseY / view.cellSize)*view.cellSize, view.cellSize, view.cellSize);
 }
 
